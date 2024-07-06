@@ -1,4 +1,11 @@
+"""
+Luba Ira
+email lubacareer@gmail.com
+Task 2
+"""
+
 from operator import concat
+
 
 class Task2:
 
@@ -19,6 +26,16 @@ class Task2:
 
     def concatenate(self, a, b):
         return concat(a, b)
+
+    def get_num(self):
+        num = input("Please enter a number: ")
+        self.sum_num(num)
+
+    def sum_num(self, num):
+        sum = 0
+        for digit in str(num):
+            sum += int(digit)
+        print(f"The digits' sum of {num} is {sum}")
 
 
 if __name__ == "__main__":
@@ -54,14 +71,13 @@ if __name__ == "__main__":
     while count < 11:
         print(count)
         count += 1
-    print(f"The loop ran {count-1} times")
+    print(f"The loop ran {count - 1} times")
 
     print("E. ")
     my_inf = {"age": 30, "letter_lname": 'L', "NIS_dollar": 0.27, "abroad": True, "apt_no": 22}
     print(my_inf)
     print("What happens if I sum age and currency?")
     print(my_inf["age"] + my_inf["NIS_dollar"])
-
 
     print("F. ")
     phone_num = input("Please enter a phone number: ")
@@ -78,4 +94,20 @@ if __name__ == "__main__":
     print("5 + 5 = ", GHIM.add(5, 5))
     print(GHIM.concatenate("Hello ", "World"))
 
+    print("J.")
+    for i in range(6):
+        for _ in range(i):
+            print('*', end='')
+        print("\n")
 
+    print("K.")
+    for i in range(7):
+        k2 = 7 - i
+        for j in range(7):
+            if j == i or j == 7 - i:
+                print('*', end='')
+            else:
+                print('  ', end='')
+        print("\n")
+
+    GHIM.get_num()
